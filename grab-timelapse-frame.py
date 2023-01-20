@@ -72,10 +72,10 @@ def main() -> None:
     parser.add_argument("--city", type=str, default="Seattle")
     args = parser.parse_args(namespace=ArgNamespace)
 
-    if args.daylight_only:
-        if not sun_is_out(args.city, args.daylight_buffer_minutes):
-            logging.info("Skipping snapshot outside of daylight hours")
-            sys.exit(0)
+#    if args.daylight_only:
+#        if not sun_is_out(args.city, args.daylight_buffer_minutes):
+#            logging.info("Skipping snapshot outside of daylight hours")
+#            sys.exit(0)
 
     output_filenames = args.output_filenames
     if "%Y" not in output_filenames:
